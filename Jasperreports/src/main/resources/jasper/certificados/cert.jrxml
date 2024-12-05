@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 9.0.0.final using JasperReports Library version 6.21.0-4f56c4f36cd19e17675219a9ac4692d5f0f13b06  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="cert" pageWidth="842" pageHeight="570" orientation="Landscape" columnWidth="842" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" uuid="fb372558-e082-435a-9d13-d5f8bf737850">
+	<property name="com.jaspersoft.studio.unit." value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageHeight" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.pageWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.topMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.bottomMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.leftMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.rightMargin" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
+	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
+	<parameter name="nome" class="java.lang.String"/>
+	<parameter name="curso" class="java.lang.String"/>
+	<parameter name="cargaHoraria" class="java.lang.Integer"/>
+	<parameter name="dataInicioCurso" class="java.util.Date"/>
+	<parameter name="dataTerminoCurso" class="java.util.Date"/>
+	<parameter name="imageJasper" class="java.lang.Object"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<detail>
+		<band height="570" splitType="Stretch">
+			<property name="com.jaspersoft.studio.unit.height" value="px"/>
+			<image>
+				<reportElement x="0" y="0" width="842" height="570" uuid="b6ab4341-4340-43d9-a48f-22adb6afcf86">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+				</reportElement>
+				<imageExpression><![CDATA[$P{imageJasper}]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="130" y="110" width="580" height="70" uuid="867836e8-48b1-4e89-9069-a216336537da"/>
+				<textElement textAlignment="Center">
+					<font size="42"/>
+				</textElement>
+				<text><![CDATA[Certificado]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="150" y="250" width="540" height="2" forecolor="rgba(0, 0, 0, 0.0)" backcolor="#1C46B0" uuid="4e22e38a-1b15-42d2-83b0-3eacda1840e9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+				</reportElement>
+			</rectangle>
+			<textField>
+				<reportElement x="160" y="220" width="520" height="30" uuid="33db0cd7-9124-4054-a8a8-c288c19b74ca"/>
+				<textElement textAlignment="Center">
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="160" y="290" width="520" height="140" uuid="b4e393c0-dd64-444c-8f7c-2bf113a43ea8"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Concluio com êxito o curso de nome "+$P{curso}+ ", totalizando " + $P{cargaHoraria} +" horas de estudo."]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="340" y="380" width="259" height="50" uuid="a99af0f9-90c6-490f-b263-84739e0ab821"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataTerminoCurso}]]></textFieldExpression>
+			</textField>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="410" y="350" width="220" height="39" uuid="350d1166-ad81-4c36-ad1f-18d734c38d5f"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{dataInicioCurso}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="160" y="380" width="220" height="30" uuid="9ba4ed63-5ba5-4efb-89bb-cd29ad2823e7"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[e encerrou-se em]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="160" y="350" width="250" height="30" uuid="36516d70-b345-4f17-8e81-650b897367ef"/>
+				<textElement>
+					<font size="22"/>
+				</textElement>
+				<text><![CDATA[Este curso teve inicio em]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>
